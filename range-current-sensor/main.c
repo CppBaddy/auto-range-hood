@@ -228,7 +228,7 @@ ISR( TIM1_COMPA_vect )
 // ADC interrupt service routine
 ISR( ADC_vect )
 {
-	switch((time & 1))
+	switch((time & 3))
 	{
 	case 0:
 		model.voltage = ADCH; //TODO recalculate into volts
